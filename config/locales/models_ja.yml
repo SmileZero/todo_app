@@ -1,0 +1,10 @@
+ja:
+  activerecord:
+    models:
+      todo: TODO
+    attributes:
+      todo:
+        task: タスク
+        due: 期日
+        memo: メモ
+        user_id: ユーザー
