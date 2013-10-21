@@ -3,7 +3,7 @@ class TodosController < ApplicationController
 
   # GET /todos
   def index
-    @todos = Todo.all
+    @todos = Todo.all.page(params[:page]).per(3)
   end
 
   # GET /todos/1
