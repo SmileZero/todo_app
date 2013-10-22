@@ -1,0 +1,15 @@
+<h1>Login</h1>
+<p id="notice"><%= notice %></p>
+<%= form_for @user, url:logins_path do |f| %>
+<div class="field">
+	<%= f.label :email %>
+	<%= f.text_field :email, type: "email" %>
+</div>
+<div class="field">
+	<%= f.label :password %>
+	<%= f.text_field :password_digest, type: "password" %>
+</div>
+<div class="submit">
+	<%= f.submit "Sign In" %>
+</div>
+<% end %>
