@@ -1,0 +1,9 @@
+yamada:
+  name: 山田太郎
+  email: yamada@rails.com
+  password_digest: b444ac06613fc8d63795be9ad0beaf55011936ac # test1
+
+kawada:
+  name: 川田次郎
+  email: kawada@rails.com
+  password_digest: 109f4b3c50d7b0df729d299bc6f8e9ef9066971f # test2
