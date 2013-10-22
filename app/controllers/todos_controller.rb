@@ -1,5 +1,6 @@
 class TodosController < ApplicationController
   before_action :set_todo, only: [:show, :edit, :update, :destroy]
+  before_action :require_login
 
   # GET /todos
   def index
@@ -58,5 +59,9 @@ class TodosController < ApplicationController
     # Only allow a trusted parameter "white list" through.
     def todo_params
       params.require(:todo).permit(:due, :task, :memo, :user_id)
+    end
+
+    def require_login
+      redirect_to(root_url, notice: 'Please Log In.') unless session[:login]
     end
 end

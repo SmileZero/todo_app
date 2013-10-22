@@ -1,0 +1,26 @@
+task1:
+  due: 2011-08-23
+  task: 打ち合わせ
+  user: yamada
+  memo: |
+    場所：(株)Rails
+    時間：15:30
+    要件：新システム
+
+task2:
+  due: 2011-08-24
+  task: コーディング
+  user: yamada
+
+task3:
+  due: 2011-08-24
+  task: テスト
+  user: kawada
+
+task4:
+  due: 2011-08-26
+  task: 打ち上げ
+  user: kawada
+  memo: |
+    場所：渋谷
+    時間：19:00
