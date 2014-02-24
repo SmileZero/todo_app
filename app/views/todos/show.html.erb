@@ -1,25 +1,5 @@
 <p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Due:</strong>
-  <%= @todo.due %>
-</p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @todo.user.name %>
-</p>
-
-<p>
-  <strong>Task:</strong>
-  <%= @todo.task %>
-</p>
-
-<p>
-  <strong>Memo:</strong>
-  <%= new_line(@todo.memo) %>
-<!-- simple_format(@todo.memo) -->
-</p>
+<%= render 'show_body'%>
 
 <%= link_to 'Edit', edit_todo_path(@todo) %> |
 <%= link_to 'Back', todos_path %>

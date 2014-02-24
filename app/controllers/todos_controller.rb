@@ -13,6 +13,9 @@ class TodosController < ApplicationController
 
   # GET /todos/1
   def show
+    if request.xhr?
+      render partial: 'show_body'
+    end
   end
 
   # GET /todos/new
@@ -22,6 +25,9 @@ class TodosController < ApplicationController
 
   # GET /todos/1/edit
   def edit
+    if request.xhr?
+      render partial: 'form'
+    end
   end
 
   # POST /todos
@@ -38,7 +44,13 @@ class TodosController < ApplicationController
   # PATCH/PUT /todos/1
   def update
     if @todo.update(todo_params)
-      redirect_to @todo, notice: 'Todo was successfully updated.'
+      if @remote
+        respond_to do |format|
+            format.js
+        end
+      else
+        redirect_to @todo, notice: 'Todo was successfully updated.'
+      end
     else
       render action: 'edit'
     end

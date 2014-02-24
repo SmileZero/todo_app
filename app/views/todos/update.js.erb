@@ -1,0 +1,9 @@
+var id = $(".edit-id").data("id")
+$("#todo-"+id).html("<%=j render partial: "todo", object: @todo %>") 
+$("#todo-"+id+" a.quick_edit").on('ajax:success',function(evt,data,status,xhr){
+  $("#show_area").html(data);
+})
+$("#todo-"+id+" a.quick_show").on('ajax:success',function(evt,data,status,xhr){
+    $("#show_area").html(data);
+})
+$("#show_area").html("<%=j render 'show_body'%>");
