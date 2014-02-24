@@ -1,7 +1,7 @@
 class Todo < ActiveRecord::Base
 	validates :task, presence: true
 	validates_presence_of :due
-	default_scope :order => 'todos.due'
+	default_scope :order => 'todos.due' #order by due
 
 	belongs_to :user
 end
